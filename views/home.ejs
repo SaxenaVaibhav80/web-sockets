@@ -8,14 +8,22 @@
 </head>
 <body>
     <h1>hello</h1>
+    <div id="text">
+
+    </div>
     <input type="text" id="message" placeholder="message">
     <button type="submit" id="btn">send</button>
+
+
 <script>
     const socket= io();
     socket.on("message",(message)=>
     {
-        console.log(message)
+        const p = document.createElement("p")
+        p.innerText=message
+        document.getElementById("text").appendChild(p)
     })
+    
     const msg = document.getElementById("message")
     const btn = document.getElementById("btn").addEventListener("click",(e)=>
     {
