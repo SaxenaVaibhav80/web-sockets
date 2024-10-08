@@ -16,8 +16,8 @@ io.on("connection",(socket)=>
 
 socket.on("user-message",(msg)=>
 {
-   io.emit("message",msg)
-
+      socket.emit("message",msg) 
+  //  socket.broadcast.emit() used when we have to broadcast (send message to everyone except the sender)
 })
 })
 
