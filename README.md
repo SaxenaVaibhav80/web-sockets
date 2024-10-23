@@ -1,2 +1,2 @@
-# web socket io
+# web sockets
  learning socket in deep 
